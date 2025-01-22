@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "912392965680",
+    "project_id": "spare-asbnhq",
+    "storage_bucket": "spare-asbnhq.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:912392965680:android:39cc47c0e18fc4dd1367f5",
+        "android_client_info": {
+          "package_name": "com.nagazakisoftware.quick"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAvnzdhQltfV2_eDrecaoFLDfPXk75z3FQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:912392965680:android:a0a833f2d3cf993f1367f5",
+        "android_client_info": {
+          "package_name": "com.nagazakisoftware.spare"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAvnzdhQltfV2_eDrecaoFLDfPXk75z3FQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
