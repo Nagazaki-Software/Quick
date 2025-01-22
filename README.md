@@ -22,18 +22,20 @@ Em resumo, o Quick oferece uma solução prática para a realização de tarefas
 
 Ideias desde o inicio:
 
-<img src="imgsReadMe\img00.png">
-<img src="imgsReadMe\img5.png">
-<img src="imgsReadMe\img6.png">
-<img src="imgsReadMe\img4.png">
-<img src="imgsReadMe\img6.png">
-<img src="imgsReadMe\img7.png">
-<img src="imgsReadMe\img8.png">
-<img src="imgsReadMe\img9.png">
-<img src="imgsReadMe\img10.png">
-<img src="imgsReadMe\img11.png">
-<img src="imgsReadMe\img12.png">
-<img src="imgsReadMe\img13.png">
-<img src="imgsReadMe\img14.png">
-<img src="imgsReadMe\img15.png">
-<img src="imgsReadMe\img16.png">
+<img src="Ativo 10hbk.png">
+<img src="Ativo 10hbk.png"></>
+<img src="Ativo 10hbk.png"></>
+<img src="Ativo 10hbk.png"></>
+<img src="Ativo 10hbk.png"></>
+<img src="Ativo 10hbk.png"></>
+<img src="Ativo 10hbk.png"></>
+<img src="Ativo 10hbk.png"></>
+<img src="Ativo 10hbk.png"></>
+<img src="Ativo 10hbk.png"></>
+<img src="Ativo 10hbk.png"></>
+<img src="Ativo 10hbk.png"></>
+<img src="Ativo 10hbk.png"></>
+<img src="Ativo 10hbk.png"></>
+
+
+
