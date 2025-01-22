@@ -19,3 +19,7 @@ O **Quick** é um aplicativo voltado para universitários que buscam uma maneira
 - **Rede de Apoio**: Facilita o networking e a construção de uma comunidade de apoio entre os estudantes.
 
 Em resumo, o Quick oferece uma solução prática para a realização de tarefas cotidianas e acadêmicas, criando um mercado de trabalho dentro do ambiente universitário, onde estudantes podem tanto ajudar quanto ser ajudados, com a vantagem de gerar uma renda extra no processo.
+
+Ideias desde o inicio:
+
+
