@@ -22,4 +22,20 @@ Em resumo, o Quick oferece uma solução prática para a realização de tarefas
 
 Ideias desde o inicio:
 
+<img src="Ativo 10hbk.png">
+<img src="Ativo 10hbk.png"></>
+<img src="Ativo 10hbk.png"></>
+<img src="Ativo 10hbk.png"></>
+<img src="Ativo 10hbk.png"></>
+<img src="Ativo 10hbk.png"></>
+<img src="Ativo 10hbk.png"></>
+<img src="Ativo 10hbk.png"></>
+<img src="Ativo 10hbk.png"></>
+<img src="Ativo 10hbk.png"></>
+<img src="Ativo 10hbk.png"></>
+<img src="Ativo 10hbk.png"></>
+<img src="Ativo 10hbk.png"></>
+<img src="Ativo 10hbk.png"></>
+
+
 
