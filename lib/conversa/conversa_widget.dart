@@ -115,8 +115,8 @@ class _ConversaWidgetState extends State<ConversaWidget> {
                                       FlutterFlowTheme.of(context).primaryText,
                                   size: 24.0,
                                 ),
-                                onPressed: () {
-                                  print('IconButton pressed ...');
+                                onPressed: () async {
+                                  context.safePop();
                                 },
                               ),
                               Container(
@@ -185,8 +185,13 @@ class _ConversaWidgetState extends State<ConversaWidget> {
                       padding: EdgeInsetsDirectional.fromSTEB(
                           16.0, 16.0, 16.0, 16.0),
                       child: StreamBuilder<List<ChatHistoryRecord>>(
-                        stream: queryChatHistoryRecord(
-                          parent: widget!.chatReference,
+                        stream: _model.queryConversa(
+                          uniqueQueryKey: conversaChatRecord.reference.id,
+                          requestFn: () => queryChatHistoryRecord(
+                            parent: widget!.chatReference,
+                            queryBuilder: (chatHistoryRecord) =>
+                                chatHistoryRecord.orderBy('horario'),
+                          ),
                         ),
                         builder: (context, snapshot) {
                           // Customize what your widget looks like when it's loading.
@@ -206,24 +211,30 @@ class _ConversaWidgetState extends State<ConversaWidget> {
                               snapshot.data!;
 
                           return SingleChildScrollView(
+                            controller: _model.columnController,
                             child: Column(
                               mainAxisSize: MainAxisSize.max,
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              crossAxisAlignment: CrossAxisAlignment.center,
                               children: List.generate(
                                   columnChatHistoryRecordList.length,
                                   (columnIndex) {
                                 final columnChatHistoryRecord =
                                     columnChatHistoryRecordList[columnIndex];
-                                return Row(
-                                  mainAxisSize: MainAxisSize.max,
-                                  mainAxisAlignment: MainAxisAlignment.start,
-                                  children: [
-                                    ChatComponenteWidget(
-                                      key: Key(
-                                          'Keyihy_${columnIndex}_of_${columnChatHistoryRecordList.length}'),
-                                      chatHistory:
-                                          columnChatHistoryRecord.reference,
-                                    ),
-                                  ],
+                                return Container(
+                                  width: double.infinity,
+                                  child: Stack(
+                                    children: [
+                                      Container(
+                                        child: ChatComponenteWidget(
+                                          key: Key(
+                                              'Keysy4_${columnIndex}_of_${columnChatHistoryRecordList.length}'),
+                                          chatHistory:
+                                              columnChatHistoryRecord.reference,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
                                 );
                               }).divide(SizedBox(height: 16.0)),
                             ),
@@ -275,6 +286,17 @@ class _ConversaWidgetState extends State<ConversaWidget> {
                                       ultimaMsg: getCurrentTimestamp,
                                       ultMsg: _model.textController.text,
                                     ));
+                                    safeSetState(() {
+                                      _model.textController?.clear();
+                                    });
+                                    await Future.delayed(
+                                        const Duration(milliseconds: 600));
+                                    await _model.columnController?.animateTo(
+                                      _model.columnController!.position
+                                          .maxScrollExtent,
+                                      duration: Duration(milliseconds: 100),
+                                      curve: Curves.ease,
+                                    );
                                   },
                                   autofocus: false,
                                   obscureText: false,

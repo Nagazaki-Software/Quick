@@ -99,7 +99,7 @@ class _TeladeeditarperfilWidgetState extends State<TeladeeditarperfilWidget>
                               alignment: AlignmentDirectional(1.0, 0.0),
                               child: Padding(
                                 padding: EdgeInsetsDirectional.fromSTEB(
-                                    4.0, 0.0, 0.0, 0.0),
+                                    5.0, 0.0, 0.0, 0.0),
                                 child: Text(
                                   'OK',
                                   style: FlutterFlowTheme.of(context)

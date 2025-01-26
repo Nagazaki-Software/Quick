@@ -1,5 +1,7 @@
 import '/auth/firebase_auth/auth_util.dart';
 import '/backend/backend.dart';
+import '/components/outher_msg_widget.dart';
+import '/components/your_msg_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'dart:ui';
@@ -66,112 +68,61 @@ class _ChatComponenteWidgetState extends State<ChatComponenteWidget> {
           );
         }
 
-        final stackChatHistoryRecord = snapshot.data!;
+        final columnChatHistoryRecord = snapshot.data!;
 
-        return Stack(
+        return Column(
+          mainAxisSize: MainAxisSize.max,
+          mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            Builder(
-              builder: (context) {
-                if (stackChatHistoryRecord.documentUser!.id ==
-                    currentUserReference!.id) {
-                  return Material(
-                    color: Colors.transparent,
-                    elevation: 1.0,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(16.0),
-                    ),
-                    child: Container(
-                      width: 240.0,
-                      decoration: BoxDecoration(
-                        color: FlutterFlowTheme.of(context).secondaryBackground,
-                        borderRadius: BorderRadius.circular(16.0),
-                      ),
-                      child: Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(
-                            12.0, 12.0, 12.0, 12.0),
-                        child: Column(
-                          mainAxisSize: MainAxisSize.max,
-                          children: [
-                            Text(
-                              'Oi! Vi que temos vários interesses em comum! 😊',
-                              style: FlutterFlowTheme.of(context)
-                                  .bodyMedium
-                                  .override(
-                                    fontFamily: 'Readex Pro',
-                                    letterSpacing: 0.0,
-                                  ),
-                            ),
-                            Text(
-                              '14:30',
-                              textAlign: TextAlign.end,
-                              style: FlutterFlowTheme.of(context)
-                                  .bodySmall
-                                  .override(
-                                    fontFamily: 'Readex Pro',
-                                    color: FlutterFlowTheme.of(context)
-                                        .secondaryText,
-                                    letterSpacing: 0.0,
-                                  ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                  );
-                } else {
-                  return Material(
-                    color: Colors.transparent,
-                    elevation: 1.0,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(16.0),
-                    ),
-                    child: Container(
-                      width: 240.0,
-                      decoration: BoxDecoration(
-                        color: FlutterFlowTheme.of(context).secondaryBackground,
-                        borderRadius: BorderRadius.circular(16.0),
-                      ),
-                      child: Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(
-                            12.0, 12.0, 12.0, 12.0),
-                        child: Column(
-                          mainAxisSize: MainAxisSize.max,
-                          children: [
-                            Align(
-                              alignment: AlignmentDirectional(-1.0, -1.0),
-                              child: Text(
-                                stackChatHistoryRecord.msg,
-                                style: FlutterFlowTheme.of(context)
-                                    .bodyMedium
-                                    .override(
-                                      fontFamily: 'Readex Pro',
-                                      letterSpacing: 0.0,
-                                    ),
+            Align(
+              alignment: AlignmentDirectional(1.0, -1.0),
+              child: Builder(
+                builder: (context) {
+                  if (columnChatHistoryRecord.documentUser!.id ==
+                      currentUserReference!.id) {
+                    return Align(
+                      alignment: AlignmentDirectional(1.0, -1.0),
+                      child: Row(
+                        mainAxisSize: MainAxisSize.max,
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        children: [
+                          Align(
+                            alignment: AlignmentDirectional(1.0, -1.0),
+                            child: wrapWithModel(
+                              model: _model.yourMsgModel,
+                              updateCallback: () => safeSetState(() {}),
+                              child: YourMsgWidget(
+                                parameter1: columnChatHistoryRecord.msg,
+                                parameter2: dateTimeFormat("relative",
+                                    columnChatHistoryRecord.horario!),
                               ),
                             ),
-                            Align(
-                              alignment: AlignmentDirectional(1.0, 1.0),
-                              child: Text(
-                                dateTimeFormat("relative",
-                                    stackChatHistoryRecord.horario!),
-                                textAlign: TextAlign.end,
-                                style: FlutterFlowTheme.of(context)
-                                    .bodySmall
-                                    .override(
-                                      fontFamily: 'Readex Pro',
-                                      color: FlutterFlowTheme.of(context)
-                                          .secondaryText,
-                                      letterSpacing: 0.0,
-                                    ),
-                              ),
-                            ),
-                          ],
-                        ),
+                          ),
+                        ],
                       ),
-                    ),
-                  );
-                }
-              },
+                    );
+                  } else {
+                    return Align(
+                      alignment: AlignmentDirectional(-1.0, -1.0),
+                      child: Row(
+                        mainAxisSize: MainAxisSize.max,
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                          wrapWithModel(
+                            model: _model.outherMsgModel,
+                            updateCallback: () => safeSetState(() {}),
+                            child: OutherMsgWidget(
+                              parameter1: columnChatHistoryRecord.msg,
+                              parameter2: dateTimeFormat(
+                                  "relative", columnChatHistoryRecord.horario!),
+                            ),
+                          ),
+                        ],
+                      ),
+                    );
+                  }
+                },
+              ),
             ),
           ],
         );

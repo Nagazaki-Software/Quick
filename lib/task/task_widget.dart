@@ -111,7 +111,8 @@ class _TaskWidgetState extends State<TaskWidget> with TickerProviderStateMixin {
             appBar: PreferredSize(
               preferredSize: Size.fromHeight(60.0),
               child: AppBar(
-                backgroundColor: FlutterFlowTheme.of(context).customColor1,
+                backgroundColor:
+                    FlutterFlowTheme.of(context).secondaryBackground,
                 automaticallyImplyLeading: false,
                 actions: [],
                 flexibleSpace: FlexibleSpaceBar(
@@ -142,7 +143,8 @@ class _TaskWidgetState extends State<TaskWidget> with TickerProviderStateMixin {
                                         .headlineMedium
                                         .override(
                                           fontFamily: 'Inter',
-                                          color: Colors.white,
+                                          color: FlutterFlowTheme.of(context)
+                                              .primaryText,
                                           fontSize: 22.0,
                                           letterSpacing: 0.0,
                                         ),
@@ -160,8 +162,7 @@ class _TaskWidgetState extends State<TaskWidget> with TickerProviderStateMixin {
                                     width: 30.0,
                                     height: 30.0,
                                     decoration: BoxDecoration(
-                                      color: FlutterFlowTheme.of(context)
-                                          .customColor1,
+                                      color: Color(0x46FFFFFF),
                                       shape: BoxShape.circle,
                                     ),
                                     child: Padding(
@@ -368,7 +369,7 @@ class _TaskWidgetState extends State<TaskWidget> with TickerProviderStateMixin {
                                   width: MediaQuery.sizeOf(context).width * 1.0,
                                   decoration: BoxDecoration(
                                     color: FlutterFlowTheme.of(context)
-                                        .customColor1,
+                                        .secondaryBackground,
                                     boxShadow: [
                                       BoxShadow(
                                         blurRadius: 4.0,

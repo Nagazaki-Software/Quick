@@ -166,7 +166,7 @@ class _ImageInicioPageViewWidgetState extends State<ImageInicioPageViewWidget> {
                                                   decoration: BoxDecoration(
                                                     gradient: LinearGradient(
                                                       colors: [
-                                                        Color(0x1C020202),
+                                                        Color(0x3C020202),
                                                         Color(0xFF090909),
                                                         Colors.black
                                                       ],

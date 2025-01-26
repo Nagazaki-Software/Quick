@@ -49,12 +49,12 @@ class _PaginaInicialWidgetState extends State<PaginaInicialWidget>
         applyInitialState: true,
         effectsBuilder: () => [
           TintEffect(
-            curve: Curves.linear,
+            curve: Curves.easeInOut,
             delay: 0.0.ms,
-            duration: 600.0.ms,
-            color: Color(0xFFF9CB03),
-            begin: 0.0,
-            end: 1.0,
+            duration: 2000.0.ms,
+            color: FlutterFlowTheme.of(context).warning,
+            begin: 1.0,
+            end: 0.52,
           ),
         ],
       ),
@@ -95,10 +95,56 @@ class _PaginaInicialWidgetState extends State<PaginaInicialWidget>
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                wrapWithModel(
-                  model: _model.navBarHomesCopy2Model,
-                  updateCallback: () => safeSetState(() {}),
-                  child: NavBarHomesCopy2Widget(),
+                Stack(
+                  children: [
+                    wrapWithModel(
+                      model: _model.navBarHomesCopy2Model,
+                      updateCallback: () => safeSetState(() {}),
+                      child: NavBarHomesCopy2Widget(),
+                    ),
+                    if (responsiveVisibility(
+                      context: context,
+                      phone: false,
+                    ))
+                      Container(
+                        width: MediaQuery.sizeOf(context).width * 1.0,
+                        height: 100.0,
+                        decoration: BoxDecoration(
+                          color: Color(0xFF131313),
+                        ),
+                        child: Padding(
+                          padding: EdgeInsets.all(24.0),
+                          child: Column(
+                            mainAxisSize: MainAxisSize.max,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                'You accepted a task',
+                                style: FlutterFlowTheme.of(context)
+                                    .bodyMedium
+                                    .override(
+                                      fontFamily: 'Readex Pro',
+                                      fontSize: 18.0,
+                                      letterSpacing: 0.0,
+                                    ),
+                              ),
+                              Flexible(
+                                child: Text(
+                                  'You have accepted a task, click here to chat',
+                                  style: FlutterFlowTheme.of(context)
+                                      .bodyMedium
+                                      .override(
+                                        fontFamily: 'Inter',
+                                        fontSize: 14.0,
+                                        letterSpacing: 0.0,
+                                      ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                  ],
                 ),
                 Expanded(
                   flex: 1,
@@ -180,23 +226,6 @@ class _PaginaInicialWidgetState extends State<PaginaInicialWidget>
                                             user2Document:
                                                 swipeableStackTasksRecord.owner,
                                           ));
-
-                                      context.pushNamed(
-                                        'task',
-                                        queryParameters: {
-                                          'task': serializeParam(
-                                            swipeableStackTasksRecord.reference,
-                                            ParamType.DocumentReference,
-                                          ),
-                                        }.withoutNulls,
-                                        extra: <String, dynamic>{
-                                          kTransitionInfoKey: TransitionInfo(
-                                            hasTransition: true,
-                                            transitionType:
-                                                PageTransitionType.rightToLeft,
-                                          ),
-                                        },
-                                      );
                                     },
                                     onUpSwipe: (index) {},
                                     onDownSwipe: (index) {},
@@ -235,7 +264,7 @@ class _PaginaInicialWidgetState extends State<PaginaInicialWidget>
                                     itemCount:
                                         swipeableStackTasksRecordList.length,
                                     controller: _model.swipeableStackController,
-                                    loop: true,
+                                    loop: false,
                                     cardDisplayCount: 100,
                                     scale: 1.0,
                                     threshold: 0.8,
@@ -455,6 +484,11 @@ class _PaginaInicialWidgetState extends State<PaginaInicialWidget>
                                                 highlightColor:
                                                     Colors.transparent,
                                                 onTap: () async {
+                                                  _model
+                                                      .swipeableStackController
+                                                      .swipeRight();
+                                                },
+                                                onLongPress: () async {
                                                   if (animationsMap[
                                                           'containerOnActionTriggerAnimation'] !=
                                                       null) {

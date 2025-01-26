@@ -238,6 +238,56 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               collectionNamePath: ['chat'],
             ),
           ),
+        ),
+        FFRoute(
+          name: 'PaginaDeInserirCodigo',
+          path: '/paginaDeInserirCodigo',
+          builder: (context, params) => PaginaDeInserirCodigoWidget(),
+        ),
+        FFRoute(
+          name: 'PaginaDeVerificarEmail',
+          path: '/paginaDeVerificarEmail',
+          builder: (context, params) => PaginaDeVerificarEmailWidget(),
+        ),
+        FFRoute(
+          name: 'PaginaDeConectarSuaConta',
+          path: '/paginaDeConectarSuaConta',
+          builder: (context, params) => PaginaDeConectarSuaContaWidget(),
+        ),
+        FFRoute(
+          name: 'PaginaBemVindos',
+          path: '/paginaBemVindos',
+          builder: (context, params) => PaginaBemVindosWidget(),
+        ),
+        FFRoute(
+          name: 'PaginaQualSeuNome',
+          path: '/paginaQualSeuNome',
+          builder: (context, params) => PaginaQualSeuNomeWidget(),
+        ),
+        FFRoute(
+          name: 'PaginaDoSeuAniversario',
+          path: '/paginaDoSeuAniversario',
+          builder: (context, params) => PaginaDoSeuAniversarioWidget(),
+        ),
+        FFRoute(
+          name: 'PaginaDeQualGenero',
+          path: '/paginaDeQualGenero',
+          builder: (context, params) => PaginaDeQualGeneroWidget(),
+        ),
+        FFRoute(
+          name: 'biubibubibubCopy',
+          path: '/biubibubibubCopy',
+          builder: (context, params) => BiubibubibubCopyWidget(),
+        ),
+        FFRoute(
+          name: 'PaginaDistanciaMaxima',
+          path: '/paginaDistanciaMaxima',
+          builder: (context, params) => PaginaDistanciaMaximaWidget(),
+        ),
+        FFRoute(
+          name: 'paginaOqueEstaProcurando',
+          path: '/paginaOqueEstaProcurando',
+          builder: (context, params) => PaginaOqueEstaProcurandoWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
