@@ -6,7 +6,7 @@ O **Quick** é um aplicativo voltado para universitários que buscam uma maneira
 
 ### **Funcionalidades principais**:
 
-1. **Lavanderia e Serviços Domésticos**  
+1. **Tarefas**  
    Usuários podem contratar outros estudantes para realizar tarefas domésticas, como lavar e passar roupas, organizar espaços, entre outros.
 
 2. **Tarefas Acadêmicas**  
@@ -29,7 +29,7 @@ O **Quick** é um aplicativo voltado para universitários que buscam uma maneira
   Os universitários podem escolher as tarefas que querem fazer e ajustar o tempo de acordo com suas agendas.
 
 - **Renda Extra**:  
-  Uma maneira de complementar a renda, especialmente útil para quem vive de forma independente ou tem poucos recursos financeiros.
+  Uma maneira de complementar a renda, especialmente útil para quem vive de forma independente ou tem poucos recursos financeiros na universidade.
 
 - **Rede de Apoio**:  
   Facilita o networking e a construção de uma comunidade de apoio entre os estudantes.
@@ -39,23 +39,3 @@ O **Quick** é um aplicativo voltado para universitários que buscam uma maneira
 **Em resumo**, o Quick oferece uma solução prática para a realização de tarefas cotidianas e acadêmicas, criando um mercado de trabalho dentro do ambiente universitário, onde estudantes podem tanto ajudar quanto ser ajudados, com a vantagem de gerar uma renda extra no processo.
 
 ---
-
-### **Ideias desde o início**:
-
-<div style="display: flex; flex-wrap: wrap; justify-content: space-between;">
-  <img src="imgsReadMe/img00.png" alt="Ideia 1" style="width: 30%; margin-bottom: 15px;">
-  <img src="imgsReadMe/img5.png" alt="Ideia 2" style="width: 30%; margin-bottom: 15px;">
-  <img src="imgsReadMe/img6.png" alt="Ideia 3" style="width: 30%; margin-bottom: 15px;">
-  <img src="imgsReadMe/img4.png" alt="Ideia 4" style="width: 30%; margin-bottom: 15px;">
-  <img src="imgsReadMe/img6.png" alt="Ideia 5" style="width: 30%; margin-bottom: 15px;">
-  <img src="imgsReadMe/img7.png" alt="Ideia 6" style="width: 30%; margin-bottom: 15px;">
-  <img src="imgsReadMe/img8.png" alt="Ideia 7" style="width: 30%; margin-bottom: 15px;">
-  <img src="imgsReadMe/img9.png" alt="Ideia 8" style="width: 30%; margin-bottom: 15px;">
-  <img src="imgsReadMe/img10.png" alt="Ideia 9" style="width: 30%; margin-bottom: 15px;">
-  <img src="imgsReadMe/img11.png" alt="Ideia 10" style="width: 30%; margin-bottom: 15px;">
-  <img src="imgsReadMe/img12.png" alt="Ideia 11" style="width: 30%; margin-bottom: 15px;">
-  <img src="imgsReadMe/img13.png" alt="Ideia 12" style="width: 30%; margin-bottom: 15px;">
-  <img src="imgsReadMe/img14.png" alt="Ideia 13" style="width: 30%; margin-bottom: 15px;">
-  <img src="imgsReadMe/img15.png" alt="Ideia 14" style="width: 30%; margin-bottom: 15px;">
-  <img src="imgsReadMe/img16.png" alt="Ideia 15" style="width: 30%; margin-bottom: 15px;">
-</div>
